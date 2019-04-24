@@ -1,3 +1,4 @@
+/* 公用样式 */
 *{
     margin: 0 ;
     padding: 0px;
@@ -5,7 +6,15 @@
 
 body{
     font:14px  "HanHei SC","PingFang SC","Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei",微软雅黑,STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+    font-weight: 400;
+}
 
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .topbar{
@@ -46,3 +55,40 @@ body{
 .topbar-info{
     float: right;
 }
+
+/* head开始 */
+.header{
+    height: 100px;
+    /* background-color: red; */
+}
+
+.logo{
+    float: left;
+    margin-top: 23px;
+    margin-bottom: 22px;
+}
+
+.logo img{
+    height: 55px;
+    width: 187px;
+}
+
+.nav{
+    float: right;
+    margin: 36px -23px 0 0;
+}
+
+.nav > li{
+    float: left;
+    padding: 0 23px;
+}
+
+.nav > li .nav-list{
+    color: #212121;
+    font-size: 18px;
+}
+
+.nav-list a:hover{
+    color: red;
+}
+/* head结束 */
