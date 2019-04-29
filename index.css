@@ -59,7 +59,7 @@ a{
 /* head开始 */
 .header{
     height: 100px;
-    background-color: rgb(36, 201, 44);
+    background-color: white;
 }
 
 .logo{
@@ -77,7 +77,7 @@ a{
     height: 44px;
     float: right;
     margin: 28px -23px 0 0;
-    line-height: 44px;
+    /* line-height: 44px; */
 }
 
 .nav > li{
@@ -94,5 +94,150 @@ a{
 .nav .nav-list:hover{
     color: red;
 }
+
+.nav-sub-list{
+    position: absolute;     /*相对于最近已定位的祖先元素*/
+    top: 43px;
+    left: -32px;
+    background-color: white;
+    width: 150px;
+    height: 102px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.nav-sub-list{
+    display: none;
+}
+
+.nav-sub-list ul{
+    padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.nav-sub-list li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.nav-sub-list li a{
+    color: #434343;
+}
+
+.nav-money{
+    position: relative;
+}
+
+.nav-money:hover .nav-sub-list{
+    display: block;
+}
+
+.nav-sub-list li:hover{
+    background: #eee;
+}
+
+.nav-sub-list li:hover a{   /*当lihover的时候a标签变色*/
+    color: red;
+}
+
+.nav-sub-list::before{
+    content: "";
+    position: absolute;
+    left: 72px;
+    top:-5px;
+    width: 7px;
+    height: 7px;
+    border:  1px solid #e5e5e5;
+    /* transform css3 变形 */
+    transform: rotate(45deg);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background-color: white;
+} 
+
+/* .nav-sub-list::before{
+    display: block;
+    content: "◆";
+    font-size: 14px;
+    position: absolute;
+    left: 72px;
+    top: -22px;
+    color: #E5E5E5;
+} */
 /* head结束 */
-/* 30分 */
+
+/* banner开始 */
+.banner{
+    height: 640px;
+    background: url(./images/index_banner.jpg) center;
+}
+
+.banner h2{
+    color: white;
+    font-size: 54px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 193px;
+}
+
+.download_btn{
+    text-align: center;
+    margin-top: 36px;   
+}
+
+.download_btn a{
+    color: white;
+    font-size: 24px;
+    background-color: #F93F2B;
+    width: 260px;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    border-radius: 5px;
+}
+/* banner结束 */
+
+/* conten开始 */
+.content{
+    width: 1140px;
+    height: 392px;
+    border: 1px solid #e6e6e6;
+    background-color: #e5e5e5;
+    margin-top: -80px;
+    padding: 30px;
+}
+
+.list{
+    width: 360px;
+    background-color: orange;
+}
+
+.list-img{
+    height: 180px;
+    background: url(./images/index_lc.png) 0 0 no-repeat;
+    /* css3新增语法  设置图片大小*/
+    background-size: 360px 180px;
+    overflow: hidden;
+}
+
+.list-title{
+    color: white;
+    font-size: 33px;
+    font-weight: 400;
+    margin: 44px 0 0 30px;
+}
+
+.list-desc{
+    color: white;
+    font-size: 33px;
+    font-weight: 300px;
+    margin: 16px 0 0 30px ;
+}
+
+.list-info{
+    margin: 10px 0 15px 10px;
+}
+
+/* content结束 */
