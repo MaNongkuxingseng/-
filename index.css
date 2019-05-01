@@ -26,7 +26,7 @@ a{
 }
 /* 公共居中class */
 .wrapper{
-    height: 40px;
+    /* height: 40px; */
     width: 1200px;
     /* background-color: rgb(185, 235, 48); */
     /* 块级元素水平居中 */
@@ -201,17 +201,20 @@ a{
 
 /* conten开始 */
 .content{
-    width: 1140px;
-    height: 392px;
+    width: 1170px;
+    /* height: 392px; */    /* 边距超出去掉后会父元素塌陷*/
     border: 1px solid #e6e6e6;
-    background-color: #e5e5e5;
+    background-color: white;
     margin-top: -80px;
-    padding: 30px;
+    padding: 30px 0 30px 30px;  /*原来是统一30px，计算li的边距时重新计算*/
+    overflow: hidden;   
 }
 
 .list{
     width: 360px;
-    background-color: orange;
+    background-color: white;
+    float: left;
+    margin-right: 30px;     /*重新计算conten边距*/
 }
 
 .list-img{
@@ -237,7 +240,44 @@ a{
 }
 
 .list-info{
-    margin: 10px 0 15px 10px;
+    padding: 10px 30px;
+    color: #666;
+    font-size: 16px;
+}
+
+.list-info span{
+    color: #ea5600;
+}
+
+.list-info div{
+    margin: 15px 0;
+}
+
+/* 直接用.list-more出现优先级问题 */
+.list-info div.list-more{
+    border-top: 1px solid #ececec;
+    font-size: 16px;
+    color: #fd3911;
+    text-align: center;
+    margin: 40px 0 10px;
+    height: 62px;
+    line-height: 62px;
+}
+
+.list-dk .list-img{
+    background: url(./images/index_dk.png) 0 0 no-repeat;
+}
+
+.list-dk .list-info span{
+    color: #4481c8;
+}
+
+.list-bx .list-img{
+    background: url(./images/index_bx.png) 0 0 no-repeat;
+}
+
+.list-bx .list-info span{
+    color: #0DB27B;
 }
 
 /* content结束 */
